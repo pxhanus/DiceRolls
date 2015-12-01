@@ -2,7 +2,7 @@
 
     Private Sub btnRollDice_Click(sender As Object, e As EventArgs) Handles btnRollDice.Click
         Dim numRolls As Integer = Val(Me.txtNumRolls.Text)
-        Dim rollOutcomes(12) As Integer
+        Dim rollOutcomes(18) As Integer
 
         Me.lstResults.Items.Clear()
 
@@ -20,7 +20,7 @@
 
 
         For count As Integer = 1 To num
-            rollSum = RndInt(1, 6) + RndInt(1, 6)
+            rollSum = RndInt(1, 6) + RndInt(1, 6) + RndInt(1, 6)
             array(rollSum) += 1
         Next
     End Sub
@@ -41,7 +41,7 @@
     'post:  Array results displayed in list box 
     '********************************************************************************************
     Sub DisplayRolls(ByRef lstbox As ListBox, ByRef array() As Integer)
-        For index As Integer = 2 To array.Length - 1
+        For index As Integer = 3 To array.Length - 1
             lstbox.Items.Add(index & vbTab & array(index))
         Next
     End Sub
