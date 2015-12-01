@@ -1,4 +1,9 @@
-﻿Public Class Form1
+﻿'Patricia Hanus
+'151201
+'Dice Rolls
+'_____________________________________________________________________________
+
+Public Class Form1
 
     Private Sub btnRollDice_Click(sender As Object, e As EventArgs) Handles btnRollDice.Click
         Dim numRolls As Integer = Val(Me.txtNumRolls.Text)
